@@ -1,30 +1,12 @@
-<!-- HomePage.vue -->
 <template>
   <div class="home-container">
     <div class="overlay-content">
       <div class="home-text">
-        <div>CHOOSE</div> 
-        <div>YOUR</div> 
-        <div>PATH</div>
+        <div>Scenerios</div> 
       </div>
-      <button class="enter-btn">Enter</button>
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const bgVideo = ref(null)
-
-onMounted(() => {
-  // Ensure it's muted by default
-  if (bgVideo.value) bgVideo.value.muted = true
-})
-
-// Expose it globally for audio toggle
-window.__bgVideo = bgVideo
-</script>
 
 <style scoped>
 .home-container {

@@ -7,7 +7,8 @@
       <a href="#">Privacy Policy</a>
     </div>
     <div class="socials">
-      <a href="#"><img src="../assets/linkedin.png" alt="LinkedIn" class="w-5" /></a>
+      <a href="#"><img src="../assets/linkedin.png" alt="LinkedIn" class="l-icon" /></a>
+      <a href="#"><img src="../assets/x.png" alt="Twitter" class="x-icon" /></a>
     </div>
   </footer>
 </template>
@@ -20,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   position: fixed;
   bottom: 0;
@@ -48,5 +49,11 @@
   display: flex;
   gap: 0.75rem;
   align-items: center;
+}
+.l-icon {
+  width: 25px;
+}
+.x-icon {
+  width: 15px;
 }
 </style>
