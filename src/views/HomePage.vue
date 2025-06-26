@@ -10,13 +10,17 @@
       class="bg-video"
       id="background-video"
     >
-      <source src="../components/" type="video/mp4" />
+      <source src="../assets/bg.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <h1>CHOOSE YOUR PATH</h1>
+      <div class="home-text">
+        <div>CHOOSE</div> 
+        <div>YOUR</div> 
+        <div>PATH</div>
+      </div>
       <button class="enter-btn">Enter</button>
     </div>
   </div>
@@ -39,9 +43,11 @@ window.__bgVideo = bgVideo
 <style scoped>
 .home-container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .bg-video {
   position: absolute;
@@ -55,10 +61,19 @@ window.__bgVideo = bgVideo
 .overlay-content {
   position: relative;
   z-index: 1;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  padding-top: 15%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rem;
+  gap: 20px;
+  align-self: flex-start;
+}
+.home-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 6rem;
+  font-weight: 500;
 }
 .enter-btn {
   background: transparent;
