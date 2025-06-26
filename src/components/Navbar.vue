@@ -26,8 +26,8 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
-  import { useRoute } from 'vue-router';
+  import { onMounted, ref } from 'vue'
+  import { useRoute } from 'vue-router'
   import { Volume2, VolumeX } from "lucide-vue-next"
 
   const route = useRoute();
@@ -35,8 +35,15 @@
 
   const isActive = (path) => route.path === path
 
+  onMounted(() => {
+    const video = window.__bgVideo
+    if (video) {
+      isMuted.value = video.muted
+    }
+  })
+
   const toggleAudio = () => {
-    const video = window.__bgVideo?.value
+    const video = window.__bgVideo
     if (video) {
       video.muted = !video.muted
       isMuted.value = video.muted
