@@ -10,7 +10,7 @@
     <div class="nav-box">
       <a :href="'/'" :class="{ active: isActive('/') }">Home</a>
       <a :href="'/about'" :class="{ active: isActive('/about') }">About</a>
-      <a :href="'/scenarios'" :class="{ active: isActive('/scenerios') }">Scenarios</a>
+      <a :href="'/scenarios'" :class="{ active: isActive('/scenarios') }">Scenarios</a>
       <a :href="'/pricing'" :class="{ active: isActive('/pricing') }">Pricing</a>
     </div>
 
